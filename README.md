@@ -62,7 +62,7 @@ certificate-verifier/
 
 ---
 
-## 📜 Smart Contract
+##  Smart Contract
 
 Contract Name: `CertificateVerifier`
 
@@ -199,7 +199,7 @@ Hash: 1202ac4435c3fda6a9ac32f32166048234069f68c4a6cf70aefd76310f037e84
 
 ---
 
-## 🚀 Deployment
+##  Deployment
 
 The frontend is deployed on Vercel using a production build.
 
