@@ -218,11 +218,11 @@ https://certverify-soroban-dapp-f9wagp083-nayanpalande21s-projects.vercel.app
 
 All unit tests passing successfully:
 
-![Tests Passing](./screenshots/testspassing.png)
+
 
 ##  Demo Video
 
-
+https://youtu.be/oYaWmjuavS4
 
 The demo shows:
 - Wallet connection  
