@@ -214,6 +214,12 @@ https://certverify-soroban-dapp-f9wagp083-nayanpalande21s-projects.vercel.app
 
 ---
 
+## 🧪 Test Output
+
+All unit tests passing successfully:
+
+![Tests Passing](./screenshots/testspassing.png)
+
 ##  Demo Video
 
 
