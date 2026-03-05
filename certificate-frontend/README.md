@@ -1,4 +1,4 @@
-#  CertVerify – Decentralized Certificate Verification dApp
+##  CertVerify – Decentralized Certificate Verification dApp
 
 CertVerify is a complete end-to-end mini-dApp built using **Stellar Soroban smart contracts** and a **React + TypeScript frontend** to register and verify certificate hashes on-chain.
 
@@ -6,7 +6,7 @@ This project demonstrates a full Web3 workflow including smart contract developm
 
 ---
 
-#  Project Overview
+##  Project Overview
 
 CertVerify allows users to:
 
@@ -21,14 +21,14 @@ The goal is to ensure certificate integrity, immutability, and decentralized ver
 
 ---
 
-# 🛠 Tech Stack
+## Tech Stack
 
-## 🔹 Smart Contract
+## Smart Contract
 - Rust
 - Soroban SDK v25
 - Stellar Testnet
 
-## 🔹 Frontend
+##  Frontend
 - React 19
 - Vite
 - TypeScript
@@ -39,9 +39,12 @@ The goal is to ensure certificate integrity, immutability, and decentralized ver
 ##  Wallet
 - Freighter Wallet (Testnet)
 
+##  Deployment
+-Vercel (Production Build)
+
 ---
 
-#  Project Structure
+##  Project Structure
 
 certificate-verifier/
 │
@@ -59,32 +62,42 @@ certificate-verifier/
 
 ---
 
-#  Smart Contract
+## 📜 Smart Contract
 
-## Contract Name
-CertificateVerifier
+Contract Name: `CertificateVerifier`
 
-## Functions
+### Functions
 
-### register_hash(hash: BytesN<32>)
-Stores a certificate hash on-chain in contract storage.
+#### register_certificate(hash: BytesN<32>, user: Address)
+Stores the certificate hash on-chain linked to a user address.
 
-### verify_hash(hash: BytesN<32>) -> bool
-Checks whether a given certificate hash exists in contract storage.
+#### verify_certificate(hash: BytesN<32>) -> bool
+Checks if the certificate hash exists in contract storage.
 
-Returns:
-- true → Certificate is valid
-- false → Certificate not found
+### Testing
+
+This project includes 3+ unit tests:
+
+- Register certificate successfully
+- Verify existing certificate
+- Verify non-existing certificate
+
+Run tests using:
+
+cargo test
+
+All tests pass successfully.
 
 ---
 
-#  Contract Testing
+##  Contract Testing
 
 This project includes 3 unit tests:
 
 1. Test registering a certificate
 2. Test verifying an existing certificate
 3. Test verifying a non-existing certificate
+
 
 ## Run Tests
 
@@ -122,7 +135,7 @@ Open this URL in your browser.
 
 ---
 
-#  How to Use the Application
+##  How to Use the Application
 
 1. Click Connect Freighter
 2. Approve connection in Freighter Wallet (Testnet)
@@ -135,14 +148,16 @@ Open this URL in your browser.
 
 ---
 
-#  Live Demo
+##  Live Demo
 
 Live Application:  
-(Add your deployed Vercel / Netlify link here)
+
+
+https://certverify-soroban-dapp-f9wagp083-nayanpalande21s-projects.vercel.app
 
 ---
 
-#  Example On-Chain Transaction
+##  Example On-Chain Transaction
 
 After registering a certificate, a transaction hash is generated.
 
@@ -154,7 +169,7 @@ Hash: 1202ac4435c3fda6a9ac32f32166048234069f68c4a6cf70aefd76310f037e84
 
 ---
 
-#  Features Implemented
+##  Features Implemented
 
 ✔ Complete end-to-end mini-dApp  
 ✔ Soroban smart contract deployed on Testnet  
@@ -173,7 +188,7 @@ Hash: 1202ac4435c3fda6a9ac32f32166048234069f68c4a6cf70aefd76310f037e84
 
 ---
 
-#  How It Works
+##  How It Works
 
 1. User uploads certificate file  
 2. SHA-256 hash is generated in frontend  
@@ -185,33 +200,22 @@ Hash: 1202ac4435c3fda6a9ac32f32166048234069f68c4a6cf70aefd76310f037e84
 
 ---
 
-#  Deployment
+## 🚀 Deployment
 
-## Build Frontend
+The frontend is deployed on Vercel using a production build.
 
-cd certificate-frontend  
-npm run build  
+Steps:
+1. Run `npm run build`
+2. Deploy using Vercel
+3. Root directory set to `certificate-frontend`
+4. Application preset: Vite
 
-## Deploy Using Vercel
-
-Option A – Using GitHub (Recommended)
-
-1. Push project to GitHub  
-2. Go to https://vercel.com  
-3. Click New Project  
-4. Import your GitHub repository  
-5. Select certificate-frontend as root directory  
-6. Deploy  
-
-You will receive a link like:
-
-https://your-project-name.vercel.app  
-
-Add this link under Live Demo section above.
+Live Application:
+https://certverify-soroban-dapp-f9wagp083-nayanpalande21s-projects.vercel.app
 
 ---
 
-#  Demo Video
+##  Demo Video
 
 
 
@@ -225,6 +229,6 @@ The demo shows:
 ---
 
 
-# License
+## License
 
 MIT
